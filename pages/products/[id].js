@@ -22,7 +22,6 @@ function Product({ product }) {
         <div>
             {product && product.id ? (
                 <div>
-                    {/* Meta Tags for Rich Previews */}
                     <Head>
                         <title>{product.title}</title>
                         <meta name="description" content={product.description} />
