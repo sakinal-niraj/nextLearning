@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 export async function getServerSideProps(context) {
@@ -19,6 +20,10 @@ function Product({ product }) {
         <div>
             {product && product.id ? (
                 <div>
+                    <Head>
+                        <title>{product.title}</title>
+                        <meta name="description" content={product.description} />
+                    </Head>
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
                     <div>
