@@ -27,10 +27,9 @@ function Product({ product }) {
                         <meta property="og:description" content={product.description} />
                         <meta property="og:image" content={product.thumbnail} />
                         <meta property="og:url" content={productUrl} />
-                        <meta property="og:type" content="product" />
-                        <meta property="og:site_name" content="Your Site Name" />
-                        <meta property="og:price:amount" content={product.price} />
-                        <meta property="og:price:currency" content="USD" />
+                        {/* <meta property="og:type" content="product" /> */}
+                        {/* <meta property="og:site_name" content="Your Site Name" /> */}
+                        {/* <meta property="og:price:amount" content={product.price} /> */}
                     </Head>
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
