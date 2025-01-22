@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Image from "next/image";
+import Head from "next/head";
 
 export async function getServerSideProps(context) {
     const { id } = context.params;
@@ -16,11 +16,13 @@ export async function getServerSideProps(context) {
 }
 
 function Product({ product }) {
-    const productUrl = `https://next-learning-phi-puce.vercel.app/products/${product.id}`;
+    const productUrl = `https://yourdomain.com/products/${product.id}`;
+
     return (
         <div>
             {product && product.id ? (
                 <div>
+                    {/* Meta Tags for Rich Previews */}
                     <Head>
                         <title>{product.title}</title>
                         <meta name="description" content={product.description} />
@@ -33,6 +35,7 @@ function Product({ product }) {
                         <meta property="og:price:amount" content={product.price} />
                         <meta property="og:price:currency" content="USD" />
                     </Head>
+
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
                     <div>
