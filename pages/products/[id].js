@@ -16,6 +16,7 @@ export async function getServerSideProps(context) {
 }
 
 function Product({ product }) {
+    const productUrl = `https://next-learning-phi-puce.vercel.app/products/${product.id}`;
     return (
         <div>
             {product && product.id ? (
