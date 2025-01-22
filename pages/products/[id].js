@@ -22,6 +22,7 @@ function Product({ product }) {
                 <div>
                     <Head>
                         <title>{product.title}</title>
+                        <meta property="og:image" content={product.thumbnail} />
                         <meta name="description" content={product.description} />
                     </Head>
                     <h1>{product.title}</h1>
