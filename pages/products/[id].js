@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export async function getServerSideProps(context) {
     const { id } = context.params;
 
@@ -20,6 +22,14 @@ function Product({ product }) {
                 <div>
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
+                    <div>
+                        {product.image && (
+                            <Image
+                                src={product.images}
+                                alt={product.title}
+                            />
+                        )}
+                    </div>
                     <p>Price: ${product.price}</p>
                 </div>
             ) : (
