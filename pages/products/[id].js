@@ -3,7 +3,6 @@ import Image from "next/image";
 export async function getServerSideProps(context) {
     const { id } = context.params;
 
-    // Fetch the product data from the API
     const res = await fetch(`https://dummyjson.com/products/${id}`);
 
     const data = await res.json();
@@ -18,7 +17,7 @@ export async function getServerSideProps(context) {
 function Product({ product }) {
     return (
         <div>
-            {product ? (
+            {product && product.id ? (
                 <div>
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
