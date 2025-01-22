@@ -23,10 +23,13 @@ function Product({ product }) {
                     <h1>{product.title}</h1>
                     <p>{product.description}</p>
                     <div>
-                        {product.image && (
+                        {product.thumbnail && (
                             <Image
-                                src={product.images}
-                                alt={product.title}
+                                src={product.thumbnail}
+                                alt="product img"
+                                width={300}
+                                height={300}
+                                style={{ objectFit: 'contain' }}
                             />
                         )}
                     </div>
